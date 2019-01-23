@@ -1,0 +1,14 @@
+<snippet>
+    <content><![CDATA[
+case ${1:ExprCASE} of
+  ${2:{ok, ${3:ExprGood}\}} -> ${4:ExprGood2};
+  ${5:{error, _\}=Er -> Er};
+  ${6:{error, Reason\} -> {error, {${7:ExprER1}, Reason\}\}};
+  Other -> ${8:Other}
+end$0
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>mc</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.erlang</scope>
+</snippet>

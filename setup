@@ -1,0 +1,76 @@
+#!/bin/bash
+
+# Make python3 by default (Anaconda maybe) + add python2 
+# Add some useful easy tool to zip\unzip
+
+# Add scripts for next
+curl
+htop
+guake
+Erlang
+java
+maven
+npm
+Lein
+bower
+tree
+
+# Do not forget to install first
+vim
+tmux
+z
+
+# Inspect next about unnecessary thg. 
+sudo apt install -yq 
+    ssh \
+    gcc \
+    g++ \
+    g++-multilib \
+    make \
+    autotools-dev \
+    autoconf \
+    libtool \
+    cmake cmake-curses-gui \
+    python-pip \
+    libexiv2-dev \
+    yasm \
+    libmagickcore-dev \
+    libmagick++-dev \
+    libmagickwand-dev \
+    libopencv-dev \
+    libeigen3-dev \
+    libgomp1 \
+    libtool \
+    libjpeg-turbo8 \
+    libwebp6 libtiff5 \
+    libfreeimage3 \
+    libgoogle-glog-dev \
+    libopenblas-dev \
+    libgflags-dev \
+    liblmdb0 \
+    libgtk2.0-0 \
+    libturbojpeg \
+    liblivemedia-dev \
+    libx264-dev \
+    libavcodec-dev libavformat-dev libswscale-dev \
+    pkg-config \
+    mc wget \
+    && pip install pytest protobuf pillow \
+    && ldconfig
+
+# Manually: 
+Chrome
+Slack
+Docker
+VK
+git lfs
+Skype
+Pretty pdf viewer
+Idea
+Sublime
+X Neural Switcher
+VLC
+# OPtional
+Gimp
+LibreOffice
+Kazam

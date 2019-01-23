@@ -1,0 +1,21 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"All Autocomplete",
+		"Dockerfile Syntax Highlighting",
+		"Enhanced Clojure",
+		"File Navigator",
+		"HTML5",
+		"HTMLBeautify",
+		"Make Automatic Variables",
+		"Makefile Improved",
+		"Markmon real-time markdown preview",
+		"Package Control",
+		"Protobuf Syntax Hightlighting",
+		"SideBarEnhancements"
+	]
+}

@@ -1,0 +1,12 @@
+// These settings override both User and Default settings for the C++ syntax
+{
+	// Set to true to insert spaces when tab is pressed
+	"translate_tabs_to_spaces": true,
+	// Always visualise the viewport on the minimap, as opposed to only
+	// showing it on mouse over
+	"always_show_minimap_viewport": true,
+	"rulers":
+	[
+		160
+	]
+}

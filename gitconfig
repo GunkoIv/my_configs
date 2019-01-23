@@ -1,0 +1,17 @@
+[user]
+    email = ivanfakovgun@gmail.com
+    name = Ivan Gunko
+[core]
+    editor = vim
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    required = true
+    process = git-lfs filter-process
+[alias]
+    last = log -1 HEAD
+    st = status --short --branch
+    f = fetch --all
+    glog = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
+[credential]
+    helper = store

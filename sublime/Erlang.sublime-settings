@@ -1,0 +1,15 @@
+{
+	"extensions":
+	[
+		"example",
+		"src",
+		"config"
+	],
+	"rulers":
+	[
+		100
+	],
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"use_tab_stops": false
+}

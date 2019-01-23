@@ -1,0 +1,38 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"1337 Color Scheme",
+		"3024 Color Scheme",
+		"42 Headers",
+		"All Autocomplete",
+		"AutoPEP8",
+		"BlackRain",
+		"C Improved",
+		"CMakeEditor",
+		"CMakeSnippets",
+		"Color Scheme - Chromodynamics",
+		"Color Scheme - Dusk",
+		"Color Scheme - Eggplant Parm",
+		"Color Scheme - RSE",
+		"Color Scheme - Vintage Terminal",
+		"ColorSchemeEditor",
+		"Dockerfile Syntax Highlighting",
+		"Ghost Snippets",
+		"Git",
+		"Harper Color Scheme",
+		"Makefile Improved",
+		"MultipleSelectionScroller",
+		"Notes",
+		"Package Control",
+		"Protobuf Syntax Hightlighting",
+		"Python 3",
+		"RainbowDrops Inspired - Color Scheme",
+		"Sherumite - Color Scheme",
+		"SideBarEnhancements",
+		"Theme - Rainbow"
+	]
+}
