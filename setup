@@ -1,76 +1,126 @@
 #!/bin/bash
 
-# Make python3 by default (Anaconda maybe) + add python2 
-# Add some useful easy tool to zip\unzip
+mkdir -p ~/bin
 
-# Add scripts for next
-curl
-htop
-guake
-Erlang
-java
-maven
-npm
-Lein
-bower
-tree
+sudo apt-get update
+sudo apt install -yq wget git curl
 
-# Do not forget to install first
-vim
-tmux
-z
+cd /tmp
 
-# Inspect next about unnecessary thg. 
-sudo apt install -yq 
-    ssh \
-    gcc \
-    g++ \
-    g++-multilib \
-    make \
-    autotools-dev \
-    autoconf \
-    libtool \
-    cmake cmake-curses-gui \
-    python-pip \
-    libexiv2-dev \
-    yasm \
-    libmagickcore-dev \
-    libmagick++-dev \
-    libmagickwand-dev \
-    libopencv-dev \
-    libeigen3-dev \
-    libgomp1 \
-    libtool \
-    libjpeg-turbo8 \
-    libwebp6 libtiff5 \
-    libfreeimage3 \
-    libgoogle-glog-dev \
-    libopenblas-dev \
-    libgflags-dev \
-    liblmdb0 \
-    libgtk2.0-0 \
-    libturbojpeg \
-    liblivemedia-dev \
-    libx264-dev \
-    libavcodec-dev libavformat-dev libswscale-dev \
-    pkg-config \
-    mc wget \
-    && pip install pytest protobuf pillow \
-    && ldconfig
+# github.com/dvorka/hstr Usefull
+sudo add-apt-repository ppa:ultradvorka/ppa
+sudo apt-get update
+sudo apt-get install hstr
+
+# For Erlang
+#wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
+#sudo dpkg -i erlang-solutions_1.0_all.deb
+
+# For node js
+curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
+
+sudo apt-get update
+sudo apt install -yq \
+	rebar \
+	python3-dev \
+    	mc \
+	tree \
+	erlang-diameter erlang erlang-manpages erlang-doc erlang-tools \
+	leiningen \
+	tmux \
+	build-essential \
+	htop \
+	guake \
+	openjdk-8-jdk \
+	maven \
+	nodejs \
+	ssh \
+    	gcc \
+    	g++ \
+    	g++-multilib \
+    	make \
+    	autotools-dev \
+    	autoconf \
+    	libtool \
+    	cmake cmake-curses-gui \
+    	python-pip \
+    	libexiv2-dev \
+    	yasm \
+    	libmagickcore-dev \
+    	libmagick++-dev \
+    	libmagickwand-dev \
+    	libopencv-dev \
+    	libeigen3-dev \
+    	libgomp1 \
+    	libtool \
+    	libjpeg-turbo8 \
+    	libwebp6 libtiff5 \
+    	libfreeimage3 \
+    	libgoogle-glog-dev \
+    	libopenblas-dev \
+    	libgflags-dev \
+    	liblmdb0 \
+    	libgtk2.0-0 \
+    	libturbojpeg \
+    	liblivemedia-dev \
+    	libx264-dev \
+    	libavcodec-dev libavformat-dev libswscale-dev \
+    	pkg-config 
+
+sudo pip install setuptools pytest protobuf pillow docker requests lomond
+
+npm install -g bower
+
+# Rebar3
+git clone https://github.com/erlang/rebar3.git
+cd rebar3
+./bootstrap
+cp ./rebar3 ~/bin
+
+# OpenSSL
+wget https://www.openssl.org/source/openssl-1.1.1.tar.gz
+tar zxvf openssl-1.1.1.tar.gz
+cd openssl-1.1.1/
+./config --prefix="${HOME}"/openssl --openssldir=~/openssl
+make -j 13
+make test
+make install
+cd -
+
+# CHrome
+sudo apt-get install libxss1 libappindicator1 libindicator7
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome*.deb
+
+# Gimp
+sudo add-apt-repository ppa:shnatsel/gimp-paint-studio ;
+sudo apt-get update ;
+sudo apt-get install gimp-paint-studio ;
+
+# X neur switcher
+sudo add-apt-repository ppa:andrew-crew-kuznetsov/xneur-stable
+sudo apt-get update
+sudo apt-get install gxneur
+
+export PATH=~/bin/:$PATH
+export PATH=$HOME/openssl/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/openssl/lib
 
 # Manually: 
-Chrome
-Slack
+Start tmux
 Docker
-VK
 git lfs
+
 Skype
+Slack
+VK
 Pretty pdf viewer
 Idea
 Sublime
 X Neural Switcher
-VLC
 # OPtional
 Gimp
 LibreOffice
 Kazam
+
+vim configuring

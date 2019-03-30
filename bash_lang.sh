@@ -4,7 +4,11 @@ make all -j $(($(nproc) + 1))
 
 cp ~/.bashrc ~/.bashrc_old && echo "export PATH=$PATH:/opt/bin" >> ~/.bashrc
 
-sleep 1
+# git log only one branch
+git log --graph {branch_name}
+
+# Remove ( color / special / escape / ANSI ) codes, from text, with sed
+sed "s,\x1B\[[0-9;]*[a-zA-Z],,g"
 
 ## Remove files younger than 1 day (to rm older replace '-' to '+' befor ''(day count))
 find -type f -mtime -1 -exec rm '{}' \;
