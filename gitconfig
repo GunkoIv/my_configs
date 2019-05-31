@@ -12,6 +12,7 @@
     last = log -1 HEAD
     st = status --short --branch
     f = fetch --all
-    glog = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
+    glog = log --color --graph  --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%ai%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)%+b%C(reset)\"
 [credential]
     helper = store
+

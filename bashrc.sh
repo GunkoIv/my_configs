@@ -16,3 +16,4 @@ export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
 export EDITOR=vim
 . ~/my_configs/z/z.sh
 
+eval $(thefuck --alias)
