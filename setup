@@ -65,6 +65,7 @@ sudo apt install -yq \
     	liblivemedia-dev \
     	libx264-dev \
     	libavcodec-dev libavformat-dev libswscale-dev \
+	jq \
     	pkg-config 
 
 sudo apt update
