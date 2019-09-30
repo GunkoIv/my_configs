@@ -4,7 +4,7 @@
 *   multiargument
 **/
 struct pass {
-  template<typename ...T> pass(T...) {}
+template<typename ...T> pass(T...) {}
 };
 // ...
 template<typename ...Args>
@@ -71,28 +71,10 @@ int main(int argc, char** argv) {
     signal(SIGSEGV, catchPosixDeathSignal);
     // ...
 
-
-
 // NOTES
 /** PROTOBUF
 0) thrown error: basic_string assign когда байтовое поле прото записывалась set_...(void*, size) отрицательная длина
-
 **/
 
-//JSON parser
-CameraOptions parseCameraOptions(const std::string& cameraOptionsStr) {
-    Json::Value root;
-    Json::Reader reader;
-    bool parsedSuccessfully = reader.parse(cameraOptionsStr, root, false);
-    if (!parsedSuccessfully) {
-        throw std::invalid_argument(reader.getFormatedErrorMessages());
-    }
-    CameraOptions cameraOptions{};
-    auto keys = root.getMemberNames();
-    for (const auto key : keys) {
-        cameraOptions.emplace_back(key, root[key].asString());
-    }
-    return cameraOptions;
-}
-
-FILE(GLOB SOURCE_MAIN ${LIB_DIR}/json/jsoncpp.cpp "src/*.cpp")
+//CMake
+// FILE(GLOB SOURCE_MAIN ${LIB_DIR}/json/jsoncpp.cpp "src/*.cpp")

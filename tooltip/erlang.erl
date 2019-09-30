@@ -1,9 +1,4 @@
 %% Оказывается, в шелле эрланга можно закрывать любую скобку при помощи ^]
-%%
-%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%  Syntax
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 -compile(export_all).
 
@@ -39,15 +34,6 @@ end).
 end).
 %Then
 erase(Name).
-
-
--type blbalbalbal(...) -> 
-...
-  ImagesMap3 :: #{ 
-    %% Attention "string" forbiden here!
-    "timestamp" => pos_integer(), 
-    term() => term()
-  }
 
 %% Sym all binary Numbers
 FF=fun F(<<W:8, Rest/binary>>, Acc0) -> Acc1 = Acc0 + W, F(Rest, Acc1);F (<<>>, Acc) -> Acc end.
@@ -133,10 +119,6 @@ filterfoldlmap(_Fun, AccOut, [], OutList) -> {ok, OutList, AccOut}.
 -ifdef(EUNIT).
 -include_lib("eunit/include/eunit.hrl").
 
-format_version_test() ->
- ?assertEqual(format_version("12.1.41"), {12,1,41}),
- ?assertEqual(format_version("4.0.1"), {4,0,1}).
-
 try validate_ui_spec(example_result_on_get_config())
 catch Class:Reason ->
   ?debugFmt("~nStacktrace:~s~n", [lager:pr_stacktrace(erlang:get_stacktrace(), {Class, Reason})])
@@ -145,34 +127,3 @@ end,
 
 -endif. %% EUNIT
 
-
--spec get_exec_docker_params(MapParams, DaemonCLArgs, AdditionalDockerParams, CamTag) ->
-  {error, Reason :: term()} | {Exec, PortSettings}
-  when
-  CamTag :: term(),
-  MapParams :: #{docker_image => nonempty_string(),
-    docker_image_ver => nonempty_string(),
-    term() => term()
-  },
-  AdditionalDockerParams :: [PortParamArg],
-  DaemonCLArgs :: [PortParamArg],
-  PortParamArg :: nonempty_string() | {term(), term()},
-  Exec :: {spawn, Command :: string() | binary()} |
-  {spawn_executable, FileName :: file:name()} |
-  {fd, In :: non_neg_integer(), Out :: non_neg_integer()},
-  PortSettings :: [Opt],
-  Opt :: {packet, N :: 4}
-  | {cd, Dir :: string() | binary()}
-  | {env, Env :: [{Name :: string(), Val :: string() | false}]}
-  | {args, [string() | binary()]}
-  | {arg0, string() | binary()}
-  | exit_status
-  | use_stdio
-  | nouse_stdio
-  | stderr_to_stdout
-  | in
-  | out
-  | binary
-  | {parallelism, Boolean :: boolean()}
-  | hide.
-  
