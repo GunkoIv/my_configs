@@ -28,7 +28,7 @@ print_dir_sizes () {
     done
 }
 alias dirsizes='print_dir_sizes'
-docker_pretty_ps () {
+docker-pretty-ps () {
 	docker ps --format '{docker_pretty_ps () {{.Names}}\n\tContainer ID:\t{{.ID}}\n\tImage: \t{{.Image}}\n\tCommand: \t{{.Command}}\n\tCreated: \t{{.CreatedAt}}\n\tStatus: \t{{.Status}}\n\tPorts: \t{{.Ports}}\n\n' | awk '{ if ( $0 ~ /^[a-zA-Z]/ ) printf "%c[1;"(((NR-1)%5)+31)"m"$0"\n", 27; else printf "%c[1;0m"$0"\n", 27; }'
 }
 alias d-ps='docker_pretty_ps'

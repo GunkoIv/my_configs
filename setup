@@ -66,6 +66,7 @@ sudo apt install -yq \
     	libx264-dev \
     	libavcodec-dev libavformat-dev libswscale-dev \
 	jq \
+	multitail \
     	pkg-config 
 
 sudo apt update
