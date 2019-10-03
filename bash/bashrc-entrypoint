@@ -1,4 +1,3 @@
-DIR="$(dirname `realpath $0`)"
 pushd . > /dev/null
 SCRIPT_PATH="${BASH_SOURCE[0]}";
 while([ -h "${SCRIPT_PATH}" ]); do
@@ -8,5 +7,6 @@ done
 cd "`dirname "${SCRIPT_PATH}"`" > /dev/null
 SCRIPT_PATH="`pwd`";
 popd  > /dev/null
-. "$SCRIPT_PATH/../z/z.sh" "$SCRIPT_PATH/bashrc-entrypoint.d/*.sh"
+source "${SCRIPT_PATH}"/../z/z.sh
+for f in "${SCRIPT_PATH}"/bashrc-entrypoint.d/*; do source $f; done
 eval $(thefuck --alias)

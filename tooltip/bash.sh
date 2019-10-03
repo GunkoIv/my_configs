@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# systemd timers list
+
+systemctl list-timers --all --no-pager
+
+# 
+
 make all -j $(($(nproc) + 1))
 
 # git log only one branch
