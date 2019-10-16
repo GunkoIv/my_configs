@@ -19,6 +19,12 @@
     a = add
     r = rebase -i
     push-lease = push --force-with-lease
+    d = diff --word-diff=color
+    d-cached = diff --word-diff=color --cached
+    diff-cached = diff --cached
+    b = branch --all
+    commit-amend = commit --amend
+    rebase-continue = rebase --continue
 [credential]
     helper = store
 
