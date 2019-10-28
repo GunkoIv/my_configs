@@ -24,6 +24,8 @@ sudo apt install -yq \
 	rebar \
 	python3-dev \
     	mc \
+	gtypist \
+	xclip \
 	tree \
 	erlang-diameter erlang erlang-manpages erlang-doc erlang-tools \
 	leiningen \
